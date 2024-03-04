@@ -1,13 +1,16 @@
 Steps
------------
+------------------------------------------------------------------------------------------
+1. Clone the project repository
+   -> git clone https://github.com/Nikhil-tr/AWSProject2.git
 
-1. Run Terraform Script
+2. Run Terraform Script
+  -> This Deploys VPC With 2 Public Subnet and 4 Private Subnets in us-east-1a and 1b
+  -> EFS for central Storage
+  -> RDS Database 
+  -> WebServer(Ec2) in private-subnet-0, private-subnet-1, bastion host in public-subnet
+  -> Bastion host in public-subnet to connect to private instances
 
-  -> This Deploys VPC With 1 Public Subnet and 2 Private Subnets in us-east-1a and 1b
-  -> 
-
-2. Connect to Instances
-
+3. Connect to Instances
   -> Connect to webserver instances through bastion host
   -> Install apache2,php,wordpress and give permissions 
       wget https://github.com/Nikhil-tr/AWSProject2/raw/main/cmnds.sh
@@ -22,8 +25,6 @@ Steps
   -> copy files from wordpress to /var/www/html
       sudo cp -R wordpress/* /var/www/html/
 
-
-3. Database Credentials
+4. Database Credentials
   -> Connect through lb-dns and provide db creds
-  -> create the required and launch wordpress 
-  
+  -> create the required and launch wordpress
