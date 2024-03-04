@@ -5,7 +5,7 @@ output "bastion-host-ip" {
 
 output "webserver-ips" {
   description = "Private IP of the Setup-Server"
-  value       = aws_instance.webserver[0].public_ip
+  value       = aws_instance.webserver[0].private_ip
 }
 
 output "lb-endpoint" {
